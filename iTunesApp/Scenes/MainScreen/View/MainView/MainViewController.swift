@@ -7,13 +7,29 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, MainViewModelDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var dataCheckView: UIView!
     let searchController = UISearchController()
+    
+    var viewModel: MainViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setup()
+        viewModel.load(query: "all")
+    }
+    
+    
+    fileprivate func setup() {
+        searchBarAdded()
+        let initilazer = MainViewModel(networkManager: NetworkManager())
+        viewModel = initilazer
+        setCollectionView()
     }
 
 
