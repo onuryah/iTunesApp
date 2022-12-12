@@ -61,6 +61,8 @@ extension MainViewModel : MainViewModelProtocol {
     func downloadImage(from url: String) {
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
+            let datakb = self.logImageSizeInKB(data: data)
+            if datakb < 100 {
             self.delegate?.reloadData()
         }
     }
@@ -70,6 +72,12 @@ extension MainViewModel : MainViewModelProtocol {
         URLSession.shared.dataTask(with: ad, completionHandler: completion).resume()
     }
     
+    func logImageSizeInKB(data: Data) -> (Int) {
+        let formatter = ByteCountFormatter()
+        formatter.allowedUnits = ByteCountFormatter.Units.useKB
+        formatter.countStyle = ByteCountFormatter.CountStyle.file
+        return (Int(Int64(data.count) / 1024))
+    }
 
 
 }
