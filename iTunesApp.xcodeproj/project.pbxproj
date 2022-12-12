@@ -56,15 +56,87 @@
 		84297B73294757320037E042 /* iTunesApp */ = {
 			isa = PBXGroup;
 			children = (
-				84297B74294757320037E042 /* AppDelegate.swift */,
-				84297B76294757320037E042 /* SceneDelegate.swift */,
-				84297B78294757320037E042 /* ViewController.swift */,
-				84297B7A294757320037E042 /* Main.storyboard */,
-				84297B7D294757340037E042 /* Assets.xcassets */,
-				84297B7F294757340037E042 /* LaunchScreen.storyboard */,
+				84297B8A294758380037E042 /* Core */,
+				84297B88294758260037E042 /* Scenes */,
 				84297B82294757340037E042 /* Info.plist */,
 			);
 			path = iTunesApp;
+			sourceTree = "<group>";
+		};
+		84297B88294758260037E042 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				84297B8B2947585B0037E042 /* MainScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		84297B8A294758380037E042 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				84297B7D294757340037E042 /* Assets.xcassets */,
+				84297B74294757320037E042 /* AppDelegate.swift */,
+				84297B7F294757340037E042 /* LaunchScreen.storyboard */,
+				84297B7A294757320037E042 /* Main.storyboard */,
+				84297B76294757320037E042 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		84297B8B2947585B0037E042 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84297B90294758B60037E042 /* Model */,
+				84297B8F294758A80037E042 /* EndPointItem */,
+				84297B8D294758760037E042 /* ViewModel */,
+				84297B8C2947586D0037E042 /* View */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		84297B8C2947586D0037E042 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84297B92294759040037E042 /* MainView */,
+				84297B8E2947589B0037E042 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84297B8D294758760037E042 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84297B8E2947589B0037E042 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		84297B8F294758A80037E042 /* EndPointItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPointItem;
+			sourceTree = "<group>";
+		};
+		84297B90294758B60037E042 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84297B92294759040037E042 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				84297B78294757320037E042 /* ViewController.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
