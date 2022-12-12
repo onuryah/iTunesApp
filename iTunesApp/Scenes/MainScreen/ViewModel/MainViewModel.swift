@@ -14,6 +14,7 @@ protocol MainViewModelProtocol {
     
     func load(query: String)
     func giveCombined() -> [[String]]
+    func giveTitlesOfSections(view: UIView) -> [String]
     func upComingDataForIndexPath(_ indexPath: IndexPath) -> String
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize
 }
@@ -71,6 +72,31 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func giveTitlesOfSections(view: UIView) -> [String] {
+        func giveTitles(view: UIView) -> [String] {
+            var titleArray = [String]()
+            if !upComingMediaList1.isEmpty {
+                titleArray.append("0-100KB")
+            }
+            if !upComingMediaList2.isEmpty{
+                titleArray.append("100-250KB")
+            }
+            if !upComingMediaList3.isEmpty{
+                titleArray.append("250-500KB")
+            }
+            if !upComingMediaList4.isEmpty{
+                titleArray.append("500+KB")
+            }
+            print("amaçsız: \(titleArray)")
+            if titleArray.isEmpty {
+                checkTheData(isThereData: false, view: view)
+            }else {
+                checkTheData(isThereData: true, view: view)
+            }
+            return titleArray
+        }
+    }
+    
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize {
             return CGSize(width: (collectionView.bounds.width - 30) / 3, height: collectionView.bounds.height / 4)
     }
