@@ -8,5 +8,6 @@ target 'iTunesApp' do
   # Pods for iTunesApp
 
    pod 'Alamofire'
+   pod 'SDWebImage'
 
 end
