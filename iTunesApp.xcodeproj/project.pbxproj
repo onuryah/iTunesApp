@@ -66,6 +66,7 @@
 		84297B88294758260037E042 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				84297B932947594A0037E042 /* DetailsScreen */,
 				84297B8B2947585B0037E042 /* MainScreen */,
 			);
 			path = Scenes;
@@ -137,6 +138,29 @@
 				84297B78294757320037E042 /* ViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		84297B932947594A0037E042 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84297B95294759610037E042 /* ViewModel */,
+				84297B94294759580037E042 /* View */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		84297B94294759580037E042 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84297B95294759610037E042 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
