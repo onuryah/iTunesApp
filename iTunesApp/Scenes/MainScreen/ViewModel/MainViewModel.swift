@@ -14,6 +14,7 @@ protocol MainViewModelProtocol {
     
     func load(query: String)
     func giveCombined() -> [[String]]
+    func upComingDataForIndexPath(_ indexPath: IndexPath) -> String
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -69,6 +70,10 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func upComingDataForIndexPath(_ indexPath: IndexPath) -> String {
+        upComingMediaList[indexPath.row]
+    }
+    
     var numberOfItems: Int {
         upComingMediaList1.count+upComingMediaList2.count+upComingMediaList3.count+upComingMediaList4.count
     }
