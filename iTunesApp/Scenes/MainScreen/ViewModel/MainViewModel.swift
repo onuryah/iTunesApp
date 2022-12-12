@@ -61,6 +61,7 @@ final class MainViewModel  {
                     let medias = movieList.compactMap{ $0 }
                     medias.forEach({ media in
                         media.screenshotUrls.forEach { string in
+                            self.downloadImage(from: string)
                         }
                     })
                     break
