@@ -20,6 +20,7 @@ protocol MainViewModelProtocol {
     func checkTheData(isThereData: Bool, view: UIView)
     func updateSearch(searchBar: UISearchController, view: UIView)
     func pushToDetails(selectedImageString: String, viewController: UIViewController)
+    func configureUpComingTableViewCell(_ cell: UpcomingCollectionViewCell, forIndexPath indexPath: IndexPath)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -75,6 +76,12 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func configureUpComingTableViewCell(_ cell: UpcomingCollectionViewCell, forIndexPath indexPath: IndexPath) {
+        let category = giveCombined()[indexPath.section]
+        let item = category[indexPath.item]
+        cell.iTunesImageView.sd_setImage(with: URL(string: item))
+    }
+    
     func pushToDetails(selectedImageString: String, viewController: UIViewController) {
         let detailsViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         detailsViewController.selected = selectedImageString

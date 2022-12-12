@@ -24,6 +24,11 @@ class MainViewController: UIViewController, MainViewModelDelegate {
         viewModel.load(query: "all")
     }
     
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
     
     fileprivate func setup() {
         searchBarAdded()
