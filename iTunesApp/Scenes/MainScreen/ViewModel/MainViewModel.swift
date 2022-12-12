@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainViewModelProtocol {
     var delegate: MainViewModelDelegate? { get set }
+    var numberOfItems: Int { get }
     
     func load(query: String)
     func giveCombined() -> [[String]]
@@ -68,6 +69,10 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    var numberOfItems: Int {
+        upComingMediaList1.count+upComingMediaList2.count+upComingMediaList3.count+upComingMediaList4.count
+    }
+    
     func giveCombined() -> [[String]] {
         return [upComingMediaList1,upComingMediaList2,upComingMediaList3,upComingMediaList4]
     }
