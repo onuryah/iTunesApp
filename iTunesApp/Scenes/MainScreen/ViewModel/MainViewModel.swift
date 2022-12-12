@@ -58,5 +58,18 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func downloadImage(from url: String) {
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            self.delegate?.reloadData()
+        }
+    }
     
+    func getData(from url: String, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        guard let ad = URL(string: url) else {return}
+        URLSession.shared.dataTask(with: ad, completionHandler: completion).resume()
+    }
+    
+
+
 }
