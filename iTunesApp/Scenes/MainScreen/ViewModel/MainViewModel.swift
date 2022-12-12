@@ -17,6 +17,7 @@ protocol MainViewModelProtocol {
     func giveTitlesOfSections(view: UIView) -> [String]
     func upComingDataForIndexPath(_ indexPath: IndexPath) -> String
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize
+    func checkTheData(isThereData: Bool, view: UIView)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -72,9 +73,18 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func checkTheData(isThereData: Bool, view: UIView) {
+        DispatchQueue.main.async {
+            if isThereData {
+                view.isHidden = true
+            }else {
+                view.isHidden = false
+            }
+        }
+    }
+    
     func giveTitlesOfSections(view: UIView) -> [String] {
-        func giveTitles(view: UIView) -> [String] {
-            var titleArray = [String]()
+        var titleArray = [String]()
             if !upComingMediaList1.isEmpty {
                 titleArray.append("0-100KB")
             }
@@ -94,7 +104,7 @@ extension MainViewModel : MainViewModelProtocol {
                 checkTheData(isThereData: true, view: view)
             }
             return titleArray
-        }
+        
     }
     
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize {
