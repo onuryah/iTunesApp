@@ -17,6 +17,7 @@
 		84297B9A29475A200037E042 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297B9929475A200037E042 /* ApiConstant.swift */; };
 		84297B9C29475BF70037E042 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297B9B29475BF70037E042 /* EndPoint.swift */; };
 		84297B9E29475C440037E042 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297B9D29475C440037E042 /* NetworkManager.swift */; };
+		84297BA029475F5E0037E042 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297B9F29475F5E0037E042 /* MediaModel.swift */; };
 		BE75BB63EA5B1CA02B7A5BD2 /* Pods_iTunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788DF59840F71491D89645A5 /* Pods_iTunesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		84297B9929475A200037E042 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		84297B9B29475BF70037E042 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		84297B9D29475C440037E042 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84297B9F29475F5E0037E042 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		F273BEEF8A582731E6452751 /* Pods-iTunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesApp.release.xcconfig"; path = "Target Support Files/Pods-iTunesApp/Pods-iTunesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 		84297B90294758B60037E042 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84297B9F29475F5E0037E042 /* MediaModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				84297B79294757320037E042 /* MainViewController.swift in Sources */,
 				84297B75294757320037E042 /* AppDelegate.swift in Sources */,
 				84297B9E29475C440037E042 /* NetworkManager.swift in Sources */,
+				84297BA029475F5E0037E042 /* MediaModel.swift in Sources */,
 				84297B98294759DF0037E042 /* ApiClientError.swift in Sources */,
 				84297B9A29475A200037E042 /* ApiConstant.swift in Sources */,
 				84297B77294757320037E042 /* SceneDelegate.swift in Sources */,
