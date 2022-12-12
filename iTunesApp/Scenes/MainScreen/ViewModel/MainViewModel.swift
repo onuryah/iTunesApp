@@ -19,6 +19,7 @@ protocol MainViewModelProtocol {
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize
     func checkTheData(isThereData: Bool, view: UIView)
     func updateSearch(searchBar: UISearchController, view: UIView)
+    func pushToDetails(selectedImageString: String, viewController: UIViewController)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -74,6 +75,12 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func pushToDetails(selectedImageString: String, viewController: UIViewController) {
+        let detailsViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "details") as! DetailsViewController
+        detailsViewController.selected = selectedImageString
+        viewController.navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
     func removeAllDatas() {
         upComingMediaList.removeAll()
         upComingMediaList1.removeAll()
