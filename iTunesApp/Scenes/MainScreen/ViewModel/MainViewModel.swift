@@ -10,6 +10,8 @@ import UIKit
 
 protocol MainViewModelProtocol {
     var delegate: MainViewModelDelegate? { get set }
+    
+    func load(query: String)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -38,7 +40,7 @@ final class MainViewModel  {
 
     
     
-    private func fetchUpComingMovieList(query: String = MainConstants.defaultQueryStr){
+    private func fetchUpComingDataList(query: String = MainConstants.defaultQueryStr){
         networkManager.request(endpoint: .upcoming(query: query), type: MediaResponse.self) { result in
             let queue = OperationQueue()
             queue.maxConcurrentOperationCount = MainConstants.threadCount
@@ -64,6 +66,10 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func load(query: String) {
+        fetchUpComingDataList(query: query)
+    }
+    
     func downloadImage(from url: String) {
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
