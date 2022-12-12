@@ -26,6 +26,7 @@ final class MainViewModel  {
     private var upComingMediaList2 : [String] = []
     private var upComingMediaList3 : [String] = []
     private var upComingMediaList4 : [String] = []
+    var combined : [[String]] = []
 
     
     enum MainConstants {
@@ -98,6 +99,10 @@ extension MainViewModel : MainViewModelProtocol {
         formatter.allowedUnits = ByteCountFormatter.Units.useKB
         formatter.countStyle = ByteCountFormatter.CountStyle.file
         return (Int(Int64(data.count) / 1024))
+    }
+    
+    func combine() {
+        combined = [upComingMediaList1,upComingMediaList2,upComingMediaList3,upComingMediaList4]
     }
 
 
