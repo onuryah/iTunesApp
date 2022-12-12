@@ -35,3 +35,11 @@ class MainViewController: UIViewController, MainViewModelDelegate {
 
 }
 
+extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+}
+
+extension MainViewController : UISearchResultsUpdating {
+    
+}
+
