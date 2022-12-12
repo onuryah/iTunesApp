@@ -15,6 +15,7 @@ protocol MainViewModelProtocol {
     func load(query: String)
     func giveCombined() -> [[String]]
     func upComingDataForIndexPath(_ indexPath: IndexPath) -> String
+    func calculateCellHeight(collectionView: UICollectionView) -> CGSize
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -70,6 +71,10 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func calculateCellHeight(collectionView: UICollectionView) -> CGSize {
+            return CGSize(width: (collectionView.bounds.width - 30) / 3, height: collectionView.bounds.height / 4)
+    }
+    
     func upComingDataForIndexPath(_ indexPath: IndexPath) -> String {
         upComingMediaList[indexPath.row]
     }
