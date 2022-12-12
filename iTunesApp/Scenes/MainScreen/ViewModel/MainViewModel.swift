@@ -18,6 +18,7 @@ protocol MainViewModelProtocol {
     func upComingDataForIndexPath(_ indexPath: IndexPath) -> String
     func calculateCellHeight(collectionView: UICollectionView) -> CGSize
     func checkTheData(isThereData: Bool, view: UIView)
+    func updateSearch(searchBar: UISearchController, view: UIView)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -73,6 +74,31 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func removeAllDatas() {
+        upComingMediaList.removeAll()
+        upComingMediaList1.removeAll()
+        upComingMediaList2.removeAll()
+        upComingMediaList3.removeAll()
+        upComingMediaList4.removeAll()
+    }
+
+    func updateSearch(searchBar: UISearchController, view: UIView) {
+        guard let text = searchBar.searchBar.text else {return}
+        if text != "" {
+            let queue = OperationQueue()
+            let operation = BlockOperation {
+                self.removeAllDatas()
+            }
+            let secondOperation = BlockOperation {
+                self.load(query: text)            }
+            secondOperation.addDependency(operation)
+            queue.addOperation(operation)
+            queue.addOperation(secondOperation)
+        }else {
+            self.load(query: "all")
+        }
+    }
+    
     func checkTheData(isThereData: Bool, view: UIView) {
         DispatchQueue.main.async {
             if isThereData {
