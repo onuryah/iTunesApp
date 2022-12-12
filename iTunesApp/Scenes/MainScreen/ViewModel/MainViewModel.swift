@@ -12,6 +12,7 @@ protocol MainViewModelProtocol {
     var delegate: MainViewModelDelegate? { get set }
     
     func load(query: String)
+    func giveCombined() -> [[String]]
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -67,6 +68,10 @@ final class MainViewModel  {
 }
 
 extension MainViewModel : MainViewModelProtocol {
+    func giveCombined() -> [[String]] {
+        return [upComingMediaList1,upComingMediaList2,upComingMediaList3,upComingMediaList4]
+    }
+    
     func load(query: String) {
         fetchUpComingDataList(query: query)
     }
