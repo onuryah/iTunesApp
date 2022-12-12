@@ -23,6 +23,7 @@
 		84297BA8294770D90037E042 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297BA7294770D90037E042 /* UpcomingCollectionViewCell.swift */; };
 		84297BAA294771250037E042 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297BA9294771250037E042 /* SectionHeaderView.swift */; };
 		84297BAC294773F90037E042 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297BAB294773F90037E042 /* DetailsViewController.swift */; };
+		84297BAE29477F4A0037E042 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84297BAD29477F4A0037E042 /* DetailsViewModel.swift */; };
 		BE75BB63EA5B1CA02B7A5BD2 /* Pods_iTunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788DF59840F71491D89645A5 /* Pods_iTunesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		84297BA7294770D90037E042 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		84297BA9294771250037E042 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		84297BAB294773F90037E042 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		84297BAD29477F4A0037E042 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F273BEEF8A582731E6452751 /* Pods-iTunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesApp.release.xcconfig"; path = "Target Support Files/Pods-iTunesApp/Pods-iTunesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,9 +124,9 @@
 			children = (
 				84297B7D294757340037E042 /* Assets.xcassets */,
 				84297B74294757320037E042 /* AppDelegate.swift */,
+				84297B76294757320037E042 /* SceneDelegate.swift */,
 				84297B7F294757340037E042 /* LaunchScreen.storyboard */,
 				84297B7A294757320037E042 /* Main.storyboard */,
-				84297B76294757320037E042 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -210,6 +212,7 @@
 		84297B95294759610037E042 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84297BAD29477F4A0037E042 /* DetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				84297BA029475F5E0037E042 /* MediaModel.swift in Sources */,
 				84297B98294759DF0037E042 /* ApiClientError.swift in Sources */,
 				84297B9A29475A200037E042 /* ApiConstant.swift in Sources */,
+				84297BAE29477F4A0037E042 /* DetailsViewModel.swift in Sources */,
 				84297BAC294773F90037E042 /* DetailsViewController.swift in Sources */,
 				84297B77294757320037E042 /* SceneDelegate.swift in Sources */,
 			);
