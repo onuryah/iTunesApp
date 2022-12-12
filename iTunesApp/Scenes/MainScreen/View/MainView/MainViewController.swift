@@ -75,6 +75,13 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
 }
 
 extension MainViewController : UISearchResultsUpdating {
+    fileprivate func searchBarAdded(){
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+    }
     
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.updateSearch(searchBar: searchController, view: dataCheckView)
+    }
 }
 
