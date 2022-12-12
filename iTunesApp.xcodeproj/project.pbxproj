@@ -56,6 +56,7 @@
 		84297B73294757320037E042 /* iTunesApp */ = {
 			isa = PBXGroup;
 			children = (
+				84297B962947599E0037E042 /* Network */,
 				84297B8A294758380037E042 /* Core */,
 				84297B88294758260037E042 /* Scenes */,
 				84297B82294757340037E042 /* Info.plist */,
@@ -161,6 +162,13 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84297B962947599E0037E042 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
