@@ -46,7 +46,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="iTunesImageView" destination="r62-Cp-2Sf" id="dR2-fg-0Sa"/>
+                                            <outlet property="iTunesImageView" destination="r62-Cp-2Sf" id="24Z-5A-hLB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -68,6 +68,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Kxu-ZK-tjO" secondAttribute="trailing" id="LzM-GQ-Z2q"/>
                                     </constraints>
                                     <connections>
+                                        <outlet property="categoryLabelField" destination="Kxu-ZK-tjO" id="5fQ-0w-9w4"/>
                                         <outlet property="sizeCategoryLabelField" destination="Kxu-ZK-tjO" id="E1A-M6-d7c"/>
                                     </connections>
                                 </collectionReusableView>
@@ -108,14 +109,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pDV-DD-GXb"/>
-                    <connections>
-                        <outlet property="collectionView" destination="y9j-c3-tK6" id="hDd-Kx-8zP"/>
-                        <outlet property="dataCheckView" destination="6KE-wm-LdY" id="1R3-fS-6dR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfX-OR-SvD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="98"/>
+            <point key="canvasLocation" x="1696" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fin-8a-Bu5">
