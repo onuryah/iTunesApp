@@ -20,6 +20,12 @@ final class MainViewModel  {
     let networkManager: NetworkManager<MainEndpointItem>
     private var upComingMediaList: [String] = []
     
+    private var upComingMediaList1 : [String] = []
+    private var upComingMediaList2 : [String] = []
+    private var upComingMediaList3 : [String] = []
+    private var upComingMediaList4 : [String] = []
+
+    
     enum MainConstants {
         static let defaultQueryStr: String = "all"
         static let threadCount: Int = 3
@@ -63,6 +69,15 @@ extension MainViewModel : MainViewModelProtocol {
             guard let data = data, error == nil else { return }
             let datakb = self.logImageSizeInKB(data: data)
             if datakb < 100 {
+                self.upComingMediaList1.append(url)
+            }else if datakb < 250 {
+                self.upComingMediaList2.append(url)
+            }else if datakb < 500 {
+                self.upComingMediaList3.append(url)
+            }else if datakb > 500 {
+                self.upComingMediaList4.append(url)
+                print(url)
+            }
             self.delegate?.reloadData()
         }
     }
