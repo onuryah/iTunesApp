@@ -17,4 +17,9 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         detailsImage.sd_setImage(with: URL(string: selected))
     }
+    
+    func addImage() {
+        detailsImage.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        view.addSubview(detailsImage)
+    }
 }
