@@ -109,6 +109,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pDV-DD-GXb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="y9j-c3-tK6" id="M5u-Yf-8pv"/>
+                        <outlet property="dataCheckView" destination="6KE-wm-LdY" id="FZf-8M-O4J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfX-OR-SvD" sceneMemberID="firstResponder"/>
             </objects>
