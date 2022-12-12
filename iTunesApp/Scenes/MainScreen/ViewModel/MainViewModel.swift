@@ -15,3 +15,11 @@ protocol MainViewModelProtocol {
 protocol MainViewModelDelegate: AnyObject {
     func reloadData()
 }
+final class MainViewModel  {
+    weak var delegate: MainViewModelDelegate?
+    private var upComingMediaList: [String] = []
+}
+
+extension MainViewModel : MainViewModelProtocol {
+    
+}
