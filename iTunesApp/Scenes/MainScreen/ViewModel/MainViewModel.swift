@@ -84,8 +84,10 @@ extension MainViewModel : MainViewModelProtocol {
     }
     
     func pushToDetails(selectedImageString: String, viewController: UIViewController) {
+        let viewModel = DetailsViewModel()
         let detailsViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         detailsViewController.selected = selectedImageString
+        detailsViewController.viewModel = viewModel
         viewController.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     

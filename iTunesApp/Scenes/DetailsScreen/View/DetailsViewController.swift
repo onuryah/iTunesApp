@@ -10,13 +10,18 @@ import SDWebImage
 
 class DetailsViewController: UIViewController {
     var selected = String()
+    var viewModel: ImageSetter?
     
     let detailsImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addImage()
-        detailsImage.sd_setImage(with: URL(string: selected))
+        setImage()
+    }
+    
+    func setImage() {
+        viewModel?.setImage(view: detailsImage, urlString: selected)
     }
     
     func addImage() {
